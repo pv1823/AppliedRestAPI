@@ -1,0 +1,18 @@
+<h1>Player List</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Position</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let player of players">
+    <td>{{ player.name }}</td>
+    <td>{{ player.age }}</td>
+    <td>{{ player.position }}</td>
+    <td>
+      <button (click)="deletePlayer(player.name)">Delete</button>
+      <button (click)="goToPlayerDetails(player.name)">Details</button>
+    </td>
+  </tr>
+</table>
